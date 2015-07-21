@@ -1,0 +1,18 @@
+[2015-06-08 17:53:21,684][INFO ][node                     ] [Vanisher] version[1.5.2], pid[3544], build[62ff986/2015-04-27T09:21:06Z]
+[2015-06-08 17:53:21,688][INFO ][node                     ] [Vanisher] initializing ...
+[2015-06-08 17:53:21,702][INFO ][plugins                  ] [Vanisher] loaded [], sites []
+[2015-06-08 17:53:25,282][INFO ][node                     ] [Vanisher] initialized
+[2015-06-08 17:53:25,282][INFO ][node                     ] [Vanisher] starting ...
+[2015-06-08 17:53:25,516][INFO ][transport                ] [Vanisher] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.20.156.86:9300]}
+[2015-06-08 17:53:25,572][INFO ][discovery                ] [Vanisher] elasticsearch/CVFVSy7oQlu_ICmBBDrfWQ
+[2015-06-08 17:53:29,361][INFO ][cluster.service          ] [Vanisher] new_master [Vanisher][CVFVSy7oQlu_ICmBBDrfWQ][v1020-wn-156-86.campus-dynamic.uwaterloo.ca][inet[/10.20.156.86:9300]], reason: zen-disco-join (elected_as_master)
+[2015-06-08 17:53:29,391][INFO ][http                     ] [Vanisher] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.20.156.86:9200]}
+[2015-06-08 17:53:29,392][INFO ][node                     ] [Vanisher] started
+[2015-06-08 17:53:30,346][INFO ][gateway                  ] [Vanisher] recovered [1] indices into cluster_state
+[2015-06-08 17:55:16,316][INFO ][cluster.service          ] [Vanisher] added {[logstash-v1020-wn-156-86.campus-dynamic.uwaterloo.ca-3603-7946][AJnAAI-2QVWiMCm9tL8ivA][v1020-wn-156-86.campus-dynamic.uwaterloo.ca][inet[/10.20.156.86:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-156-86.campus-dynamic.uwaterloo.ca-3603-7946][AJnAAI-2QVWiMCm9tL8ivA][v1020-wn-156-86.campus-dynamic.uwaterloo.ca][inet[/10.20.156.86:9301]]{data=false, client=true}])
+[2015-06-08 17:55:27,521][INFO ][cluster.metadata         ] [Vanisher] [logstash-2015.06.08] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
+[2015-06-08 17:55:27,819][INFO ][cluster.metadata         ] [Vanisher] [logstash-2015.06.08] update_mapping [dandelion] (dynamic)
+[2015-06-08 17:55:41,465][INFO ][cluster.metadata         ] [Vanisher] [.kibana] create_mapping [index-pattern]
+[2015-06-08 17:55:41,843][INFO ][cluster.metadata         ] [Vanisher] [.kibana] update_mapping [config] (dynamic)
+[2015-06-08 17:55:43,940][INFO ][cluster.metadata         ] [Vanisher] [.kibana] create_mapping [search]
+[2015-06-08 17:55:51,997][INFO ][cluster.metadata         ] [Vanisher] [.kibana] create_mapping [dashboard]

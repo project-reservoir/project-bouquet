@@ -1,0 +1,32 @@
+[2015-06-04 23:23:37,805][INFO ][node                     ] [Left Hand] version[1.5.2], pid[6387], build[62ff986/2015-04-27T09:21:06Z]
+[2015-06-04 23:23:37,807][INFO ][node                     ] [Left Hand] initializing ...
+[2015-06-04 23:23:37,818][INFO ][plugins                  ] [Left Hand] loaded [], sites []
+[2015-06-04 23:23:43,246][INFO ][node                     ] [Left Hand] initialized
+[2015-06-04 23:23:43,248][INFO ][node                     ] [Left Hand] starting ...
+[2015-06-04 23:23:43,692][INFO ][transport                ] [Left Hand] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.20.156.86:9300]}
+[2015-06-04 23:23:43,747][INFO ][discovery                ] [Left Hand] elasticsearch/XXPt7sYiRNW0QNT-pQDQhA
+[2015-06-04 23:23:47,554][INFO ][cluster.service          ] [Left Hand] new_master [Left Hand][XXPt7sYiRNW0QNT-pQDQhA][v1020-wn-156-86.campus-dynamic.uwaterloo.ca][inet[/10.20.156.86:9300]], reason: zen-disco-join (elected_as_master)
+[2015-06-04 23:23:47,574][INFO ][http                     ] [Left Hand] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.20.156.86:9200]}
+[2015-06-04 23:23:47,575][INFO ][node                     ] [Left Hand] started
+[2015-06-04 23:23:47,596][INFO ][gateway                  ] [Left Hand] recovered [0] indices into cluster_state
+[2015-06-04 23:34:13,179][INFO ][node                     ] [Left Hand] stopping ...
+[2015-06-04 23:34:13,204][INFO ][node                     ] [Left Hand] stopped
+[2015-06-04 23:34:13,204][INFO ][node                     ] [Left Hand] closing ...
+[2015-06-04 23:34:13,211][INFO ][node                     ] [Left Hand] closed
+[2015-06-04 23:34:16,653][INFO ][node                     ] [En Sabah Nur] version[1.5.2], pid[6430], build[62ff986/2015-04-27T09:21:06Z]
+[2015-06-04 23:34:16,654][INFO ][node                     ] [En Sabah Nur] initializing ...
+[2015-06-04 23:34:16,661][INFO ][plugins                  ] [En Sabah Nur] loaded [], sites []
+[2015-06-04 23:37:14,376][INFO ][node                     ] [Miguel Espinosa] version[1.5.2], pid[6457], build[62ff986/2015-04-27T09:21:06Z]
+[2015-06-04 23:37:14,377][INFO ][node                     ] [Miguel Espinosa] initializing ...
+[2015-06-04 23:37:14,383][INFO ][plugins                  ] [Miguel Espinosa] loaded [], sites []
+[2015-06-04 23:37:17,681][INFO ][node                     ] [Miguel Espinosa] initialized
+[2015-06-04 23:37:17,683][INFO ][node                     ] [Miguel Espinosa] starting ...
+[2015-06-04 23:37:17,946][INFO ][transport                ] [Miguel Espinosa] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.20.156.86:9300]}
+[2015-06-04 23:37:17,996][INFO ][discovery                ] [Miguel Espinosa] elasticsearch/LMwVJzKJRGG9FEtMXcWzWw
+[2015-06-04 23:37:21,782][INFO ][cluster.service          ] [Miguel Espinosa] new_master [Miguel Espinosa][LMwVJzKJRGG9FEtMXcWzWw][v1020-wn-156-86.campus-dynamic.uwaterloo.ca][inet[/10.20.156.86:9300]], reason: zen-disco-join (elected_as_master)
+[2015-06-04 23:37:21,804][INFO ][http                     ] [Miguel Espinosa] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.20.156.86:9200]}
+[2015-06-04 23:37:21,805][INFO ][node                     ] [Miguel Espinosa] started
+[2015-06-04 23:37:21,817][INFO ][gateway                  ] [Miguel Espinosa] recovered [0] indices into cluster_state
+[2015-06-04 23:46:09,903][DEBUG][action.admin.cluster.health] [Miguel Espinosa] observer: timeout notification from cluster service. timeout setting [5s], time since start [5s]
+[2015-06-04 23:46:32,248][INFO ][cluster.metadata         ] [Miguel Espinosa] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings []
+[2015-06-04 23:46:32,757][INFO ][cluster.metadata         ] [Miguel Espinosa] [.kibana] update_mapping [config] (dynamic)

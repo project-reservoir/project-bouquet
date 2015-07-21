@@ -1,0 +1,4 @@
+---
+BUNDLE_PATH: /Users/nicolekjiang/git/fydp/logstash-1.5.0/vendor/bundle
+BUNDLE_WITHOUT: build:development
+BUNDLE_GEMFILE: /Users/nicolekjiang/git/fydp/logstash-1.5.0/Gemfile
