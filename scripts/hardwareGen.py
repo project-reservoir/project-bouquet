@@ -10,6 +10,10 @@ import time
 import datetime
 import threading
 
+#output location 
+dandOutput = "output/dandelionDeviceInfo.txt"
+sunfOutput = "output/sunflowerDeviceInfo.txt"
+
 #init dandelion
 dandelion = {}
 dandNum = 28
@@ -41,7 +45,6 @@ dandLocationLat = [ 36.788219,
  36.771171,
  36.730183,
  36.683391]
-
 dandLocationLon = [-119.586868,
 -119.602661,
 -119.572792,
@@ -70,6 +73,7 @@ dandLocationLon = [-119.586868,
 -119.311867,
 -119.321136,
 -119.302254]
+
 
 #init sunflower
 sunflower = {}
@@ -140,8 +144,9 @@ def generateDandelion(dandNum):
 		created_at = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
 		dandelion[x] = Dandelion(dandID,lat, lon,firmVersion,created_at)
 
-		with open("hw/dandelion.txt", "a") as myfile:
+		with open(dandOutput, "a") as myfile:
 		    myfile.write(str(dandID)+" "+str(lat)+" "+str(lon) + " "+str(firmVersion)+" "+str(created_at)+"\n")
+	print('Dandelions Generated')
 
 
 def generateSunflower(sunfNum):
@@ -153,12 +158,13 @@ def generateSunflower(sunfNum):
 		created_at = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
 		sunflower[x] = Sunflower(sunflowerID,lat,lon,firmVersion,created_at)
 
-		with open("hw/sunflower.txt", "a") as myfile:
+		with open(sunfOutput, "a") as myfile:
 		    myfile.write(str(sunflowerID)+" "+str(lat)+" "+str(lon)+" "+str(firmVersion)+" "+str(created_at)+"\n")
+	print('Sunflowers Generated \n')
 
 
-
-#generateDandelion(dandNum)
+#generate device information
+generateDandelion(dandNum)
 generateSunflower(sunfNum)
 
 
