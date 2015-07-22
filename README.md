@@ -11,7 +11,7 @@ Web portion of project reservoir
   - dandelion-json-simple.conf
   	A simple parser that reads Json formatted files.  
 
- ### Data Generators 
+### Data Generators 
  Since Bouquet is not hooked up to sunflower, there are a few scripts written to custom generate data to feed into Logstash. Under /script folder: 
  - hardwareGen.py
  	Generates device information for Sunflower and Dandelion
