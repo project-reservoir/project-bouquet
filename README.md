@@ -19,5 +19,10 @@ Web portion of project reservoir
  	Generates Dandelion sensor data on a timer. 
 In the script/output/ folder,  the two .txt files are the generated result, along with sensorData.txt in the /script folder 
 
+####How the UI look like:
 
+(July 22, 2015) 
+  http://i.imgur.com/qjeu0f3.png
+  http://i.imgur.com/4DGfc5t.png
+  http://i.imgur.com/ULBiLDR.png
 
