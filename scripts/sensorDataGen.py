@@ -80,12 +80,12 @@ def generateDand(dandNum):
 	status = 'on'
 	airTemp = 12
 	humidity = 20
-	soiltemp1 = 18
-	soiltemp2 = 18
-	soiltemp3 = 18
-	mois1 = 20
-	mois2 = 20
-	mois3 = 20
+	soiltemp1 = randint(18,20)
+	soiltemp2 =  randint(18,20)
+	soiltemp3 =  randint(18,20)
+	mois1 = randint(15,25)
+	mois2 = randint(15,25)
+	mois3 = randint(15,25)
 	batteryLevel = 100
 	for i in range (0,dandNum):
 		dandID = i
@@ -94,6 +94,13 @@ def generateDand(dandNum):
 			humidity, soiltemp1, soiltemp2, soiltemp3, 
 			mois1, mois2, mois3, batteryLevel)
 		print('Initialized: Dandelion ID:' + str(dandID) + ' BatteryLevel: ' + str(dandelion[i].showBatteryLevel()))
+			#write to file 
+		with open("sensorData.txt", "a") as myfile:
+		    myfile.write(str(dandID) + " "
+		    	+str(status)+" "+str(airTemp)+" " + str(humidity)+" "+
+		    	str(soiltemp1) + " " + str(soiltemp2) + " " + str(soiltemp3)+" "+ 
+		    	str(mois1) + " " + str(mois2) + " " + str(mois3)+" "+
+		    	str(batteryLevel)+ "\n")
 
 #determine which dandelion to update 
 def updateDand(dandNum):
@@ -186,14 +193,14 @@ def genDandSensorData(id):
 		' Moisture: ' + str(m1) + " " + str(m2) + " " + str(m3) + " ")
 
 	#write to file 
-	with open("sensorData.txt", "a") as myfile:
-	    myfile.write(str(id) + " "
-	    	+str(status)+" "+str(air)+"," + str(humidity)+" "+
-	    	str(s1) + " " + str(s2) + " " + str(s3)+","+ 
-	    	str(m1) + " " + str(m2) + " " + str(m3)+" "+
-	    	str(batteryLevel)+ "\n")
+	# with open("sensorData.txt", "a") as myfile:
+	#     myfile.write(str(id) + " "
+	#     	+str(status)+" "+str(air)+" " + str(humidity)+" "+
+	#     	str(s1) + " " + str(s2) + " " + str(s3)+" "+ 
+	#     	str(m1) + " " + str(m2) + " " + str(m3)+" "+
+	#     	str(batteryLevel)+ "\n")
 
-	time.sleep(2) #delay for generating next round of data 
+	time.sleep(10) #delay for generating next round of data 
 	runGenerator()
 
 
