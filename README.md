@@ -10,6 +10,8 @@ Web portion of project reservoir
   	Similar purpose to previous parser but for sunflower 
   - dandelion-json-simple.conf
   	A simple parser that reads Json formatted files.  
+  - readDand.conf
+    Parse dandelion sensor data. 
 
 ### Data Generators 
  Since Bouquet is not hooked up to sunflower, there are a few scripts written to custom generate data to feed into Logstash. Under /script folder: 
