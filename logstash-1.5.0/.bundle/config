@@ -1,4 +1,4 @@
 ---
-BUNDLE_PATH: /Users/nicolekjiang/git/fydp/project-bouquet/logstash-1.5.0/vendor/bundle
+BUNDLE_PATH: C:/Users/Ian/github/project-bouquet/logstash-1.5.0/vendor/bundle
 BUNDLE_WITHOUT: build:development
-BUNDLE_GEMFILE: /Users/nicolekjiang/git/fydp/project-bouquet/logstash-1.5.0/Gemfile
+BUNDLE_GEMFILE: C:/Users/Ian/github/project-bouquet/logstash-1.5.0/Gemfile

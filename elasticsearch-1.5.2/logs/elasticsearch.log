@@ -1,693 +1,184 @@
-[2015-07-21 14:11:20,252][INFO ][cluster.service          ] [Rage] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6040-9790][7362gDWWRbaxKENSarIxSA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6040-9790][7362gDWWRbaxKENSarIxSA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 14:11:37,859][INFO ][cluster.service          ] [Rage] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6352-9790][CoUjeUfVS0OQ4t6A5peTNA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6352-9790][CoUjeUfVS0OQ4t6A5peTNA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 14:12:48,284][INFO ][cluster.service          ] [Rage] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6352-9790][CoUjeUfVS0OQ4t6A5peTNA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6352-9790][CoUjeUfVS0OQ4t6A5peTNA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 14:13:05,751][INFO ][cluster.service          ] [Rage] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 14:13:26,791][INFO ][cluster.metadata         ] [Rage] [logstash-2015.07.21] update_mapping [core2] (dynamic)
-[2015-07-21 14:57:47,672][INFO ][cluster.metadata         ] [Rage] [.kibana] deleting index
-[2015-07-21 14:57:47,717][INFO ][cluster.metadata         ] [Rage] [logstash-2015.07.04] deleting index
-[2015-07-21 14:57:47,775][INFO ][cluster.metadata         ] [Rage] [logstash-2015.06.23] deleting index
-[2015-07-21 14:57:47,832][INFO ][cluster.metadata         ] [Rage] [logstash-2015.07.21] deleting index
-[2015-07-21 14:57:47,878][INFO ][cluster.metadata         ] [Rage] [logstash-2015.06.08] deleting index
-[2015-07-21 14:57:59,278][INFO ][cluster.metadata         ] [Rage] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings []
-[2015-07-21 14:57:59,406][INFO ][cluster.metadata         ] [Rage] [.kibana] update_mapping [config] (dynamic)
-[2015-07-21 14:57:59,620][INFO ][cluster.metadata         ] [Rage] [.kibana] create_mapping [index-pattern]
-[2015-07-21 15:12:04,069][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@54c49a8d]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:12:34,068][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@508a22f8]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:13:04,070][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@5cc741f6]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:13:34,071][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@2b636a25]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:14:04,074][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@21b02815]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:14:34,078][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@431c2e57]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:15:04,080][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@54aa88de]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:15:34,084][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@6271398]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:16:04,082][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@cdf78e8]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:16:34,082][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@77589667]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:17:04,081][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@f31a3f6]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:17:34,085][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@1a2a58af]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:18:04,084][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@1435af15]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:18:34,087][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@651b9f2b]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:19:04,090][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@62ddeda]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:19:34,091][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@702dbb03]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:20:04,094][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@77fbb4b7]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:20:34,098][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@54f8aefe]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:21:04,099][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@1162262e]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:21:34,103][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@751b9b18]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:22:04,101][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@7dc94dcc]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:22:34,101][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@1ad9eeee]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:23:04,103][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@244ac96]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:23:34,105][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@7fa29496]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:24:04,105][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@4c63a001]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:24:34,107][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@403d83b1]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:25:04,106][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@5eab0322]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:25:34,111][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@6b2dbb89]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:26:04,110][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@b70a551]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:26:34,110][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@7d984818]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:27:04,114][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@220c558f]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:27:34,114][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@1c2d7f05]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:28:03,998][WARN ][index.translog           ] [Rage] [.kibana][0] failed to flush shard on translog threshold
-org.elasticsearch.index.engine.FlushFailedEngineException: [.kibana][0] Flush failed
-	at org.elasticsearch.index.engine.InternalEngine.flush(InternalEngine.java:647)
-	at org.elasticsearch.index.engine.InternalEngine.flush(InternalEngine.java:593)
-	at org.elasticsearch.index.shard.IndexShard.flush(IndexShard.java:675)
-	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:203)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.elasticsearch.index.translog.TranslogException: [.kibana][0] failed to create new translog file
-	at org.elasticsearch.index.translog.fs.FsTranslog.newTransientTranslog(FsTranslog.java:292)
-	at org.elasticsearch.index.engine.InternalEngine.flush(InternalEngine.java:635)
-	... 6 more
-Caused by: java.io.FileNotFoundException: /Users/nicolekjiang/git/fydp/elasticsearch-1.5.2 2/data/elasticsearch/nodes/0/indices/.kibana/0/translog/translog-1437505079308 (No such file or directory)
-	at java.io.RandomAccessFile.open0(Native Method)
-	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
-	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
-	at org.elasticsearch.index.translog.fs.RafReference.<init>(RafReference.java:49)
-	at org.elasticsearch.index.translog.fs.FsTranslog.newTransientTranslog(FsTranslog.java:290)
-	... 7 more
-[2015-07-21 15:28:04,118][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@31436b89]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:28:34,123][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@340639a0]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:29:04,125][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@70befbd4]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:29:34,130][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@132ebe03]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:30:04,132][DEBUG][action.admin.indices.stats] [Rage] [.kibana][0], node[3Lh-7WDeQRWQobQ_Mndcow], [P], s[STARTED]: failed to execute [org.elasticsearch.action.admin.indices.stats.IndicesStatsRequest@10a75b9a]
-org.elasticsearch.ElasticsearchException: failed to refresh store stats
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1458)
-	at org.elasticsearch.index.store.Store$StoreStatsCache.refresh(Store.java:1443)
-	at org.elasticsearch.common.util.SingleObjectCache.getOrRefresh(SingleObjectCache.java:55)
-	at org.elasticsearch.index.store.Store.stats(Store.java:285)
-	at org.elasticsearch.index.shard.IndexShard.storeStats(IndexShard.java:600)
-	at org.elasticsearch.action.admin.indices.stats.CommonStats.<init>(CommonStats.java:139)
-	at org.elasticsearch.action.admin.indices.stats.ShardStats.<init>(ShardStats.java:49)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:208)
-	at org.elasticsearch.action.admin.indices.stats.TransportIndicesStatsAction.shardOperation(TransportIndicesStatsAction.java:56)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:30:26,823][INFO ][node                     ] [Rage] stopping ...
-[2015-07-21 15:30:26,852][WARN ][index.engine             ] [Rage] [.kibana][0] failed to read latest segment infos on flush
-org.apache.lucene.store.NoSuchDirectoryException: directory '/Users/nicolekjiang/git/fydp/elasticsearch-1.5.2 2/data/elasticsearch/nodes/0/indices/.kibana/0/index' does not exist
-	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:213)
-	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:237)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:818)
-	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:769)
-	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:458)
-	at org.elasticsearch.common.lucene.Lucene.readSegmentInfos(Lucene.java:89)
-	at org.elasticsearch.index.store.Store.readSegmentsInfo(Store.java:158)
-	at org.elasticsearch.index.store.Store.readLastCommittedSegmentsInfo(Store.java:148)
-	at org.elasticsearch.index.engine.InternalEngine.flush(InternalEngine.java:675)
-	at org.elasticsearch.index.engine.InternalEngine.flush(InternalEngine.java:588)
-	at org.elasticsearch.index.engine.Engine.flushAndClose(Engine.java:1041)
-	at org.elasticsearch.index.shard.IndexShard.close(IndexShard.java:731)
-	at org.elasticsearch.index.IndexService.closeShardInjector(IndexService.java:408)
-	at org.elasticsearch.index.IndexService.removeShard(IndexService.java:382)
-	at org.elasticsearch.index.IndexService.close(IndexService.java:273)
-	at org.elasticsearch.indices.IndicesService.removeIndex(IndicesService.java:383)
-	at org.elasticsearch.indices.IndicesService.access$000(IndicesService.java:105)
-	at org.elasticsearch.indices.IndicesService$1.run(IndicesService.java:148)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:30:26,860][WARN ][index.engine             ] [Rage] [.kibana][0] failed to rollback writer on close
-org.apache.lucene.store.NoSuchDirectoryException: directory '/Users/nicolekjiang/git/fydp/elasticsearch-1.5.2 2/data/elasticsearch/nodes/0/indices/.kibana/0/index' does not exist
-	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:213)
-	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:237)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:48)
-	at org.apache.lucene.index.IndexFileDeleter.refresh(IndexFileDeleter.java:426)
-	at org.apache.lucene.index.IndexFileDeleter.refresh(IndexFileDeleter.java:462)
-	at org.apache.lucene.index.IndexWriter.rollbackInternal(IndexWriter.java:2149)
-	at org.apache.lucene.index.IndexWriter.rollback(IndexWriter.java:2089)
-	at org.elasticsearch.index.engine.InternalEngine.closeNoLock(InternalEngine.java:983)
-	at org.elasticsearch.index.engine.Engine.close(Engine.java:1061)
-	at org.elasticsearch.index.engine.Engine.flushAndClose(Engine.java:1048)
-	at org.elasticsearch.index.shard.IndexShard.close(IndexShard.java:731)
-	at org.elasticsearch.index.IndexService.closeShardInjector(IndexService.java:408)
-	at org.elasticsearch.index.IndexService.removeShard(IndexService.java:382)
-	at org.elasticsearch.index.IndexService.close(IndexService.java:273)
-	at org.elasticsearch.indices.IndicesService.removeIndex(IndicesService.java:383)
-	at org.elasticsearch.indices.IndicesService.access$000(IndicesService.java:105)
-	at org.elasticsearch.indices.IndicesService$1.run(IndicesService.java:148)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[2015-07-21 15:30:26,862][INFO ][node                     ] [Rage] stopped
-[2015-07-21 15:30:26,862][INFO ][node                     ] [Rage] closing ...
-[2015-07-21 15:30:26,872][INFO ][node                     ] [Rage] closed
-[2015-07-21 15:30:39,882][INFO ][node                     ] [Dragon of the Moon] version[1.5.2], pid[6623], build[62ff986/2015-04-27T09:21:06Z]
-[2015-07-21 15:30:39,883][INFO ][node                     ] [Dragon of the Moon] initializing ...
-[2015-07-21 15:30:39,892][INFO ][plugins                  ] [Dragon of the Moon] loaded [], sites []
-[2015-07-21 15:30:42,980][INFO ][node                     ] [Dragon of the Moon] initialized
-[2015-07-21 15:30:42,981][INFO ][node                     ] [Dragon of the Moon] starting ...
-[2015-07-21 15:30:43,153][INFO ][transport                ] [Dragon of the Moon] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.20.167.68:9300]}
-[2015-07-21 15:30:43,183][INFO ][discovery                ] [Dragon of the Moon] elasticsearch/hXc_A8FoRzWdKrGufz6OEg
-[2015-07-21 15:30:46,966][INFO ][cluster.service          ] [Dragon of the Moon] new_master [Dragon of the Moon][hXc_A8FoRzWdKrGufz6OEg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9300]], reason: zen-disco-join (elected_as_master)
-[2015-07-21 15:30:46,989][INFO ][http                     ] [Dragon of the Moon] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.20.167.68:9200]}
-[2015-07-21 15:30:46,990][INFO ][node                     ] [Dragon of the Moon] started
-[2015-07-21 15:30:47,642][INFO ][gateway                  ] [Dragon of the Moon] recovered [1] indices into cluster_state
-[2015-07-21 15:30:48,241][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 15:48:33,956][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6828-9802][zQEfzY7OSrqk92hVSDvhxg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6828-9802][zQEfzY7OSrqk92hVSDvhxg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}])
-[2015-07-21 15:48:34,790][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6828-9802][zQEfzY7OSrqk92hVSDvhxg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6828-9802][zQEfzY7OSrqk92hVSDvhxg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 15:49:35,076][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-6374-9790][zOSOTBIuSbifBxtU9kiljw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 16:01:44,212][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7062-9790][A5aC52EZSEe0orixAHBagw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7062-9790][A5aC52EZSEe0orixAHBagw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 16:04:39,636][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.21] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
-[2015-07-21 16:04:39,887][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.21] update_mapping [core2] (dynamic)
-[2015-07-21 16:04:47,697][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7062-9790][A5aC52EZSEe0orixAHBagw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7062-9790][A5aC52EZSEe0orixAHBagw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 16:07:10,763][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7103-9790][kXPGAdgmQdegfCMmf8Gv3w][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7103-9790][kXPGAdgmQdegfCMmf8Gv3w][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 16:07:12,243][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.21] update_mapping [core2] (dynamic)
-[2015-07-21 16:07:21,804][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] update_mapping [config] (dynamic)
-[2015-07-21 16:08:00,807][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [search]
-[2015-07-21 16:11:17,151][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [visualization]
-[2015-07-21 16:15:44,055][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [dashboard]
-[2015-07-21 20:05:47,792][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7103-9790][kXPGAdgmQdegfCMmf8Gv3w][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-7103-9790][kXPGAdgmQdegfCMmf8Gv3w][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 20:37:26,999][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-10715-9792][2ulQ5FSXSXyDnMvmC3B-sw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-10715-9792][2ulQ5FSXSXyDnMvmC3B-sw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 20:37:28,418][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
-[2015-07-21 20:37:28,558][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] update_mapping [core2] (dynamic)
-[2015-07-21 21:15:22,142][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-10715-9792][2ulQ5FSXSXyDnMvmC3B-sw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-10715-9792][2ulQ5FSXSXyDnMvmC3B-sw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 21:15:43,998][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-11219-9790][iNJJNFnpSP6BfKqJnQRgZg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-11219-9790][iNJJNFnpSP6BfKqJnQRgZg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9301]]{data=false, client=true}])
-[2015-07-21 21:21:47,803][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] deleting index
-[2015-07-21 21:21:47,832][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] deleting index
-[2015-07-21 21:21:47,940][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.21] deleting index
-[2015-07-21 21:22:01,372][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
-[2015-07-21 21:22:01,581][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] update_mapping [core2] (dynamic)
-[2015-07-21 21:22:26,497][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings []
-[2015-07-21 21:22:26,655][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] update_mapping [config] (dynamic)
-[2015-07-21 21:22:26,767][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [index-pattern]
-[2015-07-21 21:23:51,596][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] update_mapping [config] (dynamic)
-[2015-07-21 21:23:57,770][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [search]
-[2015-07-21 21:24:07,872][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [visualization]
-[2015-07-21 21:39:41,477][INFO ][cluster.metadata         ] [Dragon of the Moon] [.kibana] create_mapping [dashboard]
-[2015-07-21 23:38:02,174][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12077-9790][27FaHkxGRaSwOZffLPVRWw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12077-9790][27FaHkxGRaSwOZffLPVRWw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}])
-[2015-07-21 23:38:10,696][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12077-9790][27FaHkxGRaSwOZffLPVRWw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12077-9790][27FaHkxGRaSwOZffLPVRWw][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 23:39:25,292][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12116-9790][5FeiYL1cS_-koVkL39GaTA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12116-9790][5FeiYL1cS_-koVkL39GaTA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}])
-[2015-07-21 23:40:23,999][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] update_mapping [core2] (dynamic)
-[2015-07-21 23:40:42,424][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12116-9790][5FeiYL1cS_-koVkL39GaTA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12116-9790][5FeiYL1cS_-koVkL39GaTA][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}), reason transport disconnected
-[2015-07-21 23:41:01,118][INFO ][cluster.service          ] [Dragon of the Moon] added {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12190-9792][4MJDoEG2SDCohlFXKS2hKg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12190-9792][4MJDoEG2SDCohlFXKS2hKg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}])
-[2015-07-21 23:41:02,602][INFO ][cluster.metadata         ] [Dragon of the Moon] [logstash-2015.07.22] update_mapping [core2] (dynamic)
-[2015-07-21 23:59:32,067][INFO ][cluster.service          ] [Dragon of the Moon] removed {[logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12190-9792][4MJDoEG2SDCohlFXKS2hKg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-v1020-wn-167-68.campus-dynamic.uwaterloo.ca-12190-9792][4MJDoEG2SDCohlFXKS2hKg][v1020-wn-167-68.campus-dynamic.uwaterloo.ca][inet[/10.20.167.68:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:00:15,862][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 02:00:15,977][INFO ][node                     ] [Peggy Carter] version[1.5.2], pid[7340], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 02:00:15,977][INFO ][node                     ] [Peggy Carter] initializing ...
+[2015-07-23 02:00:15,977][INFO ][plugins                  ] [Peggy Carter] loaded [], sites []
+[2015-07-23 02:00:18,815][INFO ][node                     ] [Peggy Carter] initialized
+[2015-07-23 02:00:19,574][INFO ][node                     ] [Peggy Carter] starting ...
+[2015-07-23 02:00:19,840][INFO ][transport                ] [Peggy Carter] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.0.123:9300]}
+[2015-07-23 02:00:20,016][INFO ][discovery                ] [Peggy Carter] elasticsearch/ao9M5SM_Rz2jfo34D2U_Cw
+[2015-07-23 02:00:23,849][INFO ][cluster.service          ] [Peggy Carter] new_master [Peggy Carter][ao9M5SM_Rz2jfo34D2U_Cw][2g][inet[/192.168.0.123:9300]], reason: zen-disco-join (elected_as_master)
+[2015-07-23 02:00:23,927][INFO ][gateway                  ] [Peggy Carter] recovered [0] indices into cluster_state
+[2015-07-23 02:00:23,963][INFO ][http                     ] [Peggy Carter] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.0.123:9200]}
+[2015-07-23 02:00:23,963][INFO ][node                     ] [Peggy Carter] started
+[2015-07-23 02:00:54,188][INFO ][bootstrap                ] running graceful exit on windows
+[2015-07-23 02:00:54,188][INFO ][node                     ] [Peggy Carter] stopping ...
+[2015-07-23 02:00:54,220][INFO ][node                     ] [Peggy Carter] stopped
+[2015-07-23 02:00:54,220][INFO ][node                     ] [Peggy Carter] closing ...
+[2015-07-23 02:00:54,220][INFO ][node                     ] [Peggy Carter] closed
+[2015-07-23 02:01:35,129][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 02:01:35,223][INFO ][node                     ] [Druig] version[1.5.2], pid[6416], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 02:01:35,223][INFO ][node                     ] [Druig] initializing ...
+[2015-07-23 02:01:35,223][INFO ][plugins                  ] [Druig] loaded [], sites []
+[2015-07-23 02:01:37,803][INFO ][node                     ] [Druig] initialized
+[2015-07-23 02:01:37,849][INFO ][node                     ] [Druig] starting ...
+[2015-07-23 02:01:38,089][INFO ][transport                ] [Druig] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.0.123:9300]}
+[2015-07-23 02:01:38,230][INFO ][discovery                ] [Druig] elasticsearch/KGW5JEMKRN6iNWzEH1Cjng
+[2015-07-23 02:01:42,028][INFO ][cluster.service          ] [Druig] new_master [Druig][KGW5JEMKRN6iNWzEH1Cjng][2g][inet[/192.168.0.123:9300]], reason: zen-disco-join (elected_as_master)
+[2015-07-23 02:01:42,106][INFO ][gateway                  ] [Druig] recovered [0] indices into cluster_state
+[2015-07-23 02:01:42,138][INFO ][http                     ] [Druig] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.0.123:9200]}
+[2015-07-23 02:01:42,138][INFO ][node                     ] [Druig] started
+[2015-07-23 02:04:38,468][INFO ][cluster.service          ] [Druig] added {[logstash-2g-7420-9792][WIUDft-iSKO5Bk6pArHX8Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-7420-9792][WIUDft-iSKO5Bk6pArHX8Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 02:09:25,749][INFO ][cluster.service          ] [Druig] added {[logstash-2g-9000-9788][VvQaF8u8RrGtMJsJURvISQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-9000-9788][VvQaF8u8RrGtMJsJURvISQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 02:10:54,613][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-9000-9788][VvQaF8u8RrGtMJsJURvISQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-9000-9788][VvQaF8u8RrGtMJsJURvISQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:10:56,176][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-7420-9792][WIUDft-iSKO5Bk6pArHX8Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-7420-9792][WIUDft-iSKO5Bk6pArHX8Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:16:17,609][INFO ][cluster.service          ] [Druig] added {[logstash-2g-7808-7948][qhpc-3IaQDK1NdKmgJbv4Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-7808-7948][qhpc-3IaQDK1NdKmgJbv4Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 02:16:21,769][DEBUG][action.admin.indices.create] [Druig] [MOWGI] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [MOWGI] Invalid index name [MOWGI], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:175)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:552)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$200(MetaDataCreateIndexService.java:88)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:365)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:188)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:158)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2015-07-23 02:19:53,202][DEBUG][action.admin.indices.create] [Druig] [MOWGI] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [MOWGI] Invalid index name [MOWGI], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:175)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:552)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$200(MetaDataCreateIndexService.java:88)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:365)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:188)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:158)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2015-07-23 02:19:57,486][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-7808-7948][qhpc-3IaQDK1NdKmgJbv4Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-7808-7948][qhpc-3IaQDK1NdKmgJbv4Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:20:32,960][INFO ][cluster.service          ] [Druig] added {[logstash-2g-6060-7948][J73cOJc_Su2QqtevrgQ97g][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-6060-7948][J73cOJc_Su2QqtevrgQ97g][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 02:20:41,957][INFO ][cluster.metadata         ] [Druig] [cheep] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2015-07-23 02:20:42,493][INFO ][cluster.metadata         ] [Druig] [cheep] update_mapping [logs] (dynamic)
+[2015-07-23 02:22:08,631][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-6060-7948][J73cOJc_Su2QqtevrgQ97g][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-6060-7948][J73cOJc_Su2QqtevrgQ97g][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:22:52,215][INFO ][cluster.service          ] [Druig] added {[logstash-2g-5928-7948][M9gKSDeFQE2EHcVPA5UXOg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-5928-7948][M9gKSDeFQE2EHcVPA5UXOg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 02:27:16,102][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 02:27:16,196][INFO ][node                     ] [Shadow-Hunter] version[1.5.2], pid[8940], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 02:27:16,196][INFO ][node                     ] [Shadow-Hunter] initializing ...
+[2015-07-23 02:27:16,196][INFO ][plugins                  ] [Shadow-Hunter] loaded [], sites []
+[2015-07-23 02:27:18,769][INFO ][node                     ] [Shadow-Hunter] initialized
+[2015-07-23 02:27:18,816][INFO ][node                     ] [Shadow-Hunter] starting ...
+[2015-07-23 02:27:19,063][INFO ][transport                ] [Shadow-Hunter] bound_address {inet[/0:0:0:0:0:0:0:0:9302]}, publish_address {inet[/192.168.0.123:9302]}
+[2015-07-23 02:27:19,204][INFO ][discovery                ] [Shadow-Hunter] elasticsearch/XmoxIcB8S_OqLmg87HTCnA
+[2015-07-23 02:27:22,273][INFO ][cluster.service          ] [Druig] added {[Shadow-Hunter][XmoxIcB8S_OqLmg87HTCnA][2g][inet[/192.168.0.123:9302]],}, reason: zen-disco-receive(join from node[[Shadow-Hunter][XmoxIcB8S_OqLmg87HTCnA][2g][inet[/192.168.0.123:9302]]])
+[2015-07-23 02:27:22,320][INFO ][cluster.service          ] [Shadow-Hunter] detected_master [Druig][KGW5JEMKRN6iNWzEH1Cjng][2g][inet[/192.168.0.123:9300]], added {[logstash-2g-5928-7948][M9gKSDeFQE2EHcVPA5UXOg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},[Druig][KGW5JEMKRN6iNWzEH1Cjng][2g][inet[/192.168.0.123:9300]],}, reason: zen-disco-receive(from master [[Druig][KGW5JEMKRN6iNWzEH1Cjng][2g][inet[/192.168.0.123:9300]]])
+[2015-07-23 02:27:22,460][INFO ][http                     ] [Shadow-Hunter] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/192.168.0.123:9201]}
+[2015-07-23 02:27:22,460][INFO ][node                     ] [Shadow-Hunter] started
+[2015-07-23 02:28:19,819][INFO ][bootstrap                ] running graceful exit on windows
+[2015-07-23 02:28:19,834][INFO ][node                     ] [Shadow-Hunter] stopping ...
+[2015-07-23 02:28:19,834][INFO ][cluster.service          ] [Druig] removed {[Shadow-Hunter][XmoxIcB8S_OqLmg87HTCnA][2g][inet[/192.168.0.123:9302]],}, reason: zen-disco-node_left([Shadow-Hunter][XmoxIcB8S_OqLmg87HTCnA][2g][inet[/192.168.0.123:9302]])
+[2015-07-23 02:28:19,995][INFO ][node                     ] [Shadow-Hunter] stopped
+[2015-07-23 02:28:19,995][INFO ][node                     ] [Shadow-Hunter] closing ...
+[2015-07-23 02:28:20,011][INFO ][node                     ] [Shadow-Hunter] closed
+[2015-07-23 02:38:56,342][INFO ][cluster.service          ] [Druig] added {[logstash-2g-5276-9788][GOuvE-siRjuSn7sCrL2mcA][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-5276-9788][GOuvE-siRjuSn7sCrL2mcA][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 02:43:10,223][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-5276-9788][GOuvE-siRjuSn7sCrL2mcA][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-5276-9788][GOuvE-siRjuSn7sCrL2mcA][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:44:12,469][INFO ][cluster.service          ] [Druig] added {[logstash-2g-8892-9792][TGSuYBRvS2WTir2Q8CdzHQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-8892-9792][TGSuYBRvS2WTir2Q8CdzHQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 02:45:49,180][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-8892-9792][TGSuYBRvS2WTir2Q8CdzHQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-8892-9792][TGSuYBRvS2WTir2Q8CdzHQ][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:45:52,611][INFO ][cluster.service          ] [Druig] removed {[logstash-2g-5928-7948][M9gKSDeFQE2EHcVPA5UXOg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-5928-7948][M9gKSDeFQE2EHcVPA5UXOg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 02:45:53,617][INFO ][bootstrap                ] running graceful exit on windows
+[2015-07-23 02:45:53,617][INFO ][node                     ] [Druig] stopping ...
+[2015-07-23 02:45:53,679][INFO ][node                     ] [Druig] stopped
+[2015-07-23 02:45:53,679][INFO ][node                     ] [Druig] closing ...
+[2015-07-23 02:45:53,695][INFO ][node                     ] [Druig] closed
+[2015-07-23 02:47:53,126][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 02:47:53,235][INFO ][node                     ] [Letha] version[1.5.2], pid[4860], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 02:47:53,235][INFO ][node                     ] [Letha] initializing ...
+[2015-07-23 02:47:53,235][INFO ][plugins                  ] [Letha] loaded [], sites []
+[2015-07-23 02:47:56,127][INFO ][node                     ] [Letha] initialized
+[2015-07-23 02:47:56,174][INFO ][node                     ] [Letha] starting ...
+[2015-07-23 02:47:56,470][INFO ][transport                ] [Letha] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.0.123:9300]}
+[2015-07-23 02:47:56,627][INFO ][discovery                ] [Letha] elasticsearch/hbMcvGimREaFvDOnCWz98g
+[2015-07-23 02:48:00,428][INFO ][cluster.service          ] [Letha] new_master [Letha][hbMcvGimREaFvDOnCWz98g][2g][inet[/192.168.0.123:9300]], reason: zen-disco-join (elected_as_master)
+[2015-07-23 02:48:00,538][INFO ][http                     ] [Letha] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.0.123:9200]}
+[2015-07-23 02:48:00,538][INFO ][node                     ] [Letha] started
+[2015-07-23 02:48:01,038][INFO ][gateway                  ] [Letha] recovered [1] indices into cluster_state
+[2015-07-23 02:49:23,970][INFO ][cluster.service          ] [Letha] added {[logstash-2g-5228-9788][Bo781LFRQd2M9FEUpSS1cA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-5228-9788][Bo781LFRQd2M9FEUpSS1cA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:02:16,222][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-5228-9788][Bo781LFRQd2M9FEUpSS1cA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-5228-9788][Bo781LFRQd2M9FEUpSS1cA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:03:29,674][INFO ][cluster.service          ] [Letha] added {[logstash-2g-4288-9792][hEeX7iCiQiuQqBJ-pxISNg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4288-9792][hEeX7iCiQiuQqBJ-pxISNg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:03:31,115][INFO ][cluster.metadata         ] [Letha] [control] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2015-07-23 04:03:31,404][INFO ][cluster.metadata         ] [Letha] [control] update_mapping [core2] (dynamic)
+[2015-07-23 04:04:41,261][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-4288-9792][hEeX7iCiQiuQqBJ-pxISNg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4288-9792][hEeX7iCiQiuQqBJ-pxISNg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:06:08,070][INFO ][cluster.service          ] [Letha] added {[logstash-2g-2592-9792][kk-mu_yqQ5e14wntIYffdg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-2592-9792][kk-mu_yqQ5e14wntIYffdg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:06:09,522][INFO ][cluster.metadata         ] [Letha] [logstash-2015.07.23] creating index, cause [auto(bulk api)], templates [logstash], shards [5]/[1], mappings [_default_]
+[2015-07-23 04:06:09,713][INFO ][cluster.metadata         ] [Letha] [logstash-2015.07.23] update_mapping [core2] (dynamic)
+[2015-07-23 04:13:55,800][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-2592-9792][kk-mu_yqQ5e14wntIYffdg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-2592-9792][kk-mu_yqQ5e14wntIYffdg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:15:06,905][INFO ][cluster.service          ] [Letha] added {[logstash-2g-2604-9788][5_MHQr_RTF6DeWRZWvaitA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-2604-9788][5_MHQr_RTF6DeWRZWvaitA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:18:42,524][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-2604-9788][5_MHQr_RTF6DeWRZWvaitA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-2604-9788][5_MHQr_RTF6DeWRZWvaitA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:27:22,335][INFO ][cluster.service          ] [Letha] added {[logstash-2g-5448-9788][rnsTLjymTzWhBkTfKnGyDw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-5448-9788][rnsTLjymTzWhBkTfKnGyDw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:27:43,439][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-5448-9788][rnsTLjymTzWhBkTfKnGyDw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-5448-9788][rnsTLjymTzWhBkTfKnGyDw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:30:27,213][INFO ][cluster.service          ] [Letha] added {[logstash-2g-7100-9788][BCu1hc40SrypDvo_8xuvGg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-7100-9788][BCu1hc40SrypDvo_8xuvGg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:31:13,476][INFO ][cluster.service          ] [Letha] added {[logstash-2g-3736-9792][DkuMihhcSI665uAGb9EZiw][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-3736-9792][DkuMihhcSI665uAGb9EZiw][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 04:32:54,765][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-7100-9788][BCu1hc40SrypDvo_8xuvGg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-7100-9788][BCu1hc40SrypDvo_8xuvGg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:32:55,420][INFO ][cluster.service          ] [Letha] removed {[logstash-2g-3736-9792][DkuMihhcSI665uAGb9EZiw][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-3736-9792][DkuMihhcSI665uAGb9EZiw][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:33:02,670][INFO ][bootstrap                ] running graceful exit on windows
+[2015-07-23 04:33:02,672][INFO ][node                     ] [Letha] stopping ...
+[2015-07-23 04:33:02,856][INFO ][node                     ] [Letha] stopped
+[2015-07-23 04:33:02,857][INFO ][node                     ] [Letha] closing ...
+[2015-07-23 04:33:02,867][INFO ][node                     ] [Letha] closed
+[2015-07-23 04:34:34,376][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 04:34:34,470][INFO ][node                     ] [Gigantus] version[1.5.2], pid[4960], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 04:34:34,470][INFO ][node                     ] [Gigantus] initializing ...
+[2015-07-23 04:34:34,486][INFO ][plugins                  ] [Gigantus] loaded [], sites []
+[2015-07-23 04:34:37,456][INFO ][node                     ] [Gigantus] initialized
+[2015-07-23 04:34:37,502][INFO ][node                     ] [Gigantus] starting ...
+[2015-07-23 04:34:37,768][INFO ][transport                ] [Gigantus] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.0.123:9300]}
+[2015-07-23 04:34:37,940][INFO ][discovery                ] [Gigantus] elasticsearch/4keOCGmCTcC-glp7w7Iu-A
+[2015-07-23 04:34:41,730][INFO ][cluster.service          ] [Gigantus] new_master [Gigantus][4keOCGmCTcC-glp7w7Iu-A][2g][inet[/192.168.0.123:9300]], reason: zen-disco-join (elected_as_master)
+[2015-07-23 04:34:41,839][INFO ][http                     ] [Gigantus] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.0.123:9200]}
+[2015-07-23 04:34:41,839][INFO ][node                     ] [Gigantus] started
+[2015-07-23 04:34:42,418][INFO ][gateway                  ] [Gigantus] recovered [3] indices into cluster_state
+[2015-07-23 04:35:23,394][INFO ][cluster.service          ] [Gigantus] added {[logstash-2g-4920-9794][1CKu6vQiQFC8b3vxRDptMw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4920-9794][1CKu6vQiQFC8b3vxRDptMw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:35:53,520][INFO ][cluster.service          ] [Gigantus] removed {[logstash-2g-4920-9794][1CKu6vQiQFC8b3vxRDptMw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4920-9794][1CKu6vQiQFC8b3vxRDptMw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:35:54,478][INFO ][bootstrap                ] running graceful exit on windows
+[2015-07-23 04:35:54,478][INFO ][node                     ] [Gigantus] stopping ...
+[2015-07-23 04:35:54,540][INFO ][node                     ] [Gigantus] stopped
+[2015-07-23 04:35:54,556][INFO ][node                     ] [Gigantus] closing ...
+[2015-07-23 04:35:54,556][INFO ][node                     ] [Gigantus] closed
+[2015-07-23 04:40:41,785][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2015-07-23 04:40:41,894][INFO ][node                     ] [Hideko Takata] version[1.5.2], pid[3312], build[62ff986/2015-04-27T09:21:06Z]
+[2015-07-23 04:40:41,894][INFO ][node                     ] [Hideko Takata] initializing ...
+[2015-07-23 04:40:41,894][INFO ][plugins                  ] [Hideko Takata] loaded [], sites []
+[2015-07-23 04:40:44,692][INFO ][node                     ] [Hideko Takata] initialized
+[2015-07-23 04:40:44,739][INFO ][node                     ] [Hideko Takata] starting ...
+[2015-07-23 04:40:45,036][INFO ][transport                ] [Hideko Takata] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.0.123:9300]}
+[2015-07-23 04:40:45,192][INFO ][discovery                ] [Hideko Takata] elasticsearch/I0DNyIYjQEq-fs99yv45hA
+[2015-07-23 04:40:48,999][INFO ][cluster.service          ] [Hideko Takata] new_master [Hideko Takata][I0DNyIYjQEq-fs99yv45hA][2g][inet[/192.168.0.123:9300]], reason: zen-disco-join (elected_as_master)
+[2015-07-23 04:40:49,108][INFO ][http                     ] [Hideko Takata] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.0.123:9200]}
+[2015-07-23 04:40:49,108][INFO ][node                     ] [Hideko Takata] started
+[2015-07-23 04:40:49,639][INFO ][gateway                  ] [Hideko Takata] recovered [3] indices into cluster_state
+[2015-07-23 04:43:47,679][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4720-9794][OesNuC_2QoqS1BDxghJ5Vg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4720-9794][OesNuC_2QoqS1BDxghJ5Vg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:45:31,230][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4720-9794][OesNuC_2QoqS1BDxghJ5Vg][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4720-9794][OesNuC_2QoqS1BDxghJ5Vg][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:46:55,837][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4020-9792][M2fcdRuWQFuJ9euSHaPswA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4020-9792][M2fcdRuWQFuJ9euSHaPswA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:50:01,976][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-2584-7948][LiPcRwaXR6eoYmlu9YJf_w][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-2584-7948][LiPcRwaXR6eoYmlu9YJf_w][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 04:50:19,139][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4020-9792][M2fcdRuWQFuJ9euSHaPswA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4020-9792][M2fcdRuWQFuJ9euSHaPswA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:50:21,276][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-2584-7948][LiPcRwaXR6eoYmlu9YJf_w][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-2584-7948][LiPcRwaXR6eoYmlu9YJf_w][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:23,504][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9834][_Wmq_iu3TXazhusUi0BIaw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9834][_Wmq_iu3TXazhusUi0BIaw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 04:54:28,067][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9838][_y30s2sWQGSBpRMzZa6T5Q][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9838][_y30s2sWQGSBpRMzZa6T5Q][2g][inet[/192.168.0.123:9302]]{data=false, client=true}])
+[2015-07-23 04:54:32,363][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9840][af0bQT3LTeqxBweaSVFQfQ][2g][inet[/192.168.0.123:9303]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9840][af0bQT3LTeqxBweaSVFQfQ][2g][inet[/192.168.0.123:9303]]{data=false, client=true}])
+[2015-07-23 04:54:36,629][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9842][T5mReKa3RV-yWayJ19kw5g][2g][inet[/192.168.0.123:9304]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9842][T5mReKa3RV-yWayJ19kw5g][2g][inet[/192.168.0.123:9304]]{data=false, client=true}])
+[2015-07-23 04:54:39,851][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9844][_Vc6eF68Rh6N9YD6nAXMrQ][2g][inet[/192.168.0.123:9305]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9844][_Vc6eF68Rh6N9YD6nAXMrQ][2g][inet[/192.168.0.123:9305]]{data=false, client=true}])
+[2015-07-23 04:54:43,086][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9846][X1kD-Op6TdeV-YnURTp7Gw][2g][inet[/192.168.0.123:9306]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9846][X1kD-Op6TdeV-YnURTp7Gw][2g][inet[/192.168.0.123:9306]]{data=false, client=true}])
+[2015-07-23 04:54:46,336][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-4972-9848][LcYBb8szQWeei_P1gnVlOg][2g][inet[/192.168.0.123:9307]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-4972-9848][LcYBb8szQWeei_P1gnVlOg][2g][inet[/192.168.0.123:9307]]{data=false, client=true}])
+[2015-07-23 04:54:58,195][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9840][af0bQT3LTeqxBweaSVFQfQ][2g][inet[/192.168.0.123:9303]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9840][af0bQT3LTeqxBweaSVFQfQ][2g][inet[/192.168.0.123:9303]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,226][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9842][T5mReKa3RV-yWayJ19kw5g][2g][inet[/192.168.0.123:9304]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9842][T5mReKa3RV-yWayJ19kw5g][2g][inet[/192.168.0.123:9304]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,226][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9834][_Wmq_iu3TXazhusUi0BIaw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9834][_Wmq_iu3TXazhusUi0BIaw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,242][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9846][X1kD-Op6TdeV-YnURTp7Gw][2g][inet[/192.168.0.123:9306]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9846][X1kD-Op6TdeV-YnURTp7Gw][2g][inet[/192.168.0.123:9306]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,242][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9844][_Vc6eF68Rh6N9YD6nAXMrQ][2g][inet[/192.168.0.123:9305]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9844][_Vc6eF68Rh6N9YD6nAXMrQ][2g][inet[/192.168.0.123:9305]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,242][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9848][LcYBb8szQWeei_P1gnVlOg][2g][inet[/192.168.0.123:9307]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9848][LcYBb8szQWeei_P1gnVlOg][2g][inet[/192.168.0.123:9307]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:54:58,258][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-4972-9838][_y30s2sWQGSBpRMzZa6T5Q][2g][inet[/192.168.0.123:9302]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-4972-9838][_y30s2sWQGSBpRMzZa6T5Q][2g][inet[/192.168.0.123:9302]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 04:55:30,702][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-6732-9792][YWefmtrXQzqAK4SCQ-gQ5Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-6732-9792][YWefmtrXQzqAK4SCQ-gQ5Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 05:00:27,431][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-6732-9792][YWefmtrXQzqAK4SCQ-gQ5Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-6732-9792][YWefmtrXQzqAK4SCQ-gQ5Q][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 05:01:05,071][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-6268-9792][mGXmP_YaS8uvUV17X8Snmw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-6268-9792][mGXmP_YaS8uvUV17X8Snmw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 05:04:23,922][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-6268-9792][mGXmP_YaS8uvUV17X8Snmw][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-6268-9792][mGXmP_YaS8uvUV17X8Snmw][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected
+[2015-07-23 05:04:53,769][INFO ][cluster.service          ] [Hideko Takata] added {[logstash-2g-2812-9790][hKoLHqYhRQ6B-4liyfBwMA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-receive(join from node[[logstash-2g-2812-9790][hKoLHqYhRQ6B-4liyfBwMA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}])
+[2015-07-23 08:30:16,590][INFO ][cluster.service          ] [Hideko Takata] removed {[logstash-2g-2812-9790][hKoLHqYhRQ6B-4liyfBwMA][2g][inet[/192.168.0.123:9301]]{data=false, client=true},}, reason: zen-disco-node_failed([logstash-2g-2812-9790][hKoLHqYhRQ6B-4liyfBwMA][2g][inet[/192.168.0.123:9301]]{data=false, client=true}), reason transport disconnected

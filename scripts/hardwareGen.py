@@ -13,6 +13,7 @@ import threading
 #output location 
 dandOutput = "output/dandelionDeviceInfo.txt"
 sunfOutput = "output/sunflowerDeviceInfo.txt"
+valveOutput = "output/valveInfo.txt"
 
 #init dandelion
 dandelion = {}
@@ -167,6 +168,20 @@ def generateSunflower(sunfNum):
 generateDandelion(dandNum)
 generateSunflower(sunfNum)
 
+
+#make valve information
+for x in range(1, 5):
+	valveid = x
+	sunflowerID = 1
+	lat = sunfLocationLat[x]
+	lon = sunfLocationLon[x]
+	mlimit = 0.35
+	twat = 4000
+	created_at = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+
+	with open(valveOutput, "a") as myfile:
+	    myfile.write(str(sunflowerID)+" "+str(valveid)+" "+str(mlimit)+" "+str(twat)+" "+str(created_at)+"\n")
+print('Valves Generated \n')
 
 
 
